@@ -1,0 +1,177 @@
+@font-face {
+  font-family: gameFont;
+  src: url(../font/huaweihaibao.ttf);
+}
+
+html, body, #root, #App {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  .basicContainer {
+    flex: 1;
+    //overflow: hidden;
+    padding: 0 18px 24px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    p {
+      font-size: 22px;
+      line-height: 34px;
+      color: #404040;
+      text-indent: 2em;
+      word-break: break-all;
+      &.item {
+        font-size: 26px;
+        color: #000000;
+        margin: 26px 0 8px;
+      }
+    }
+  }
+  .am-button-active {
+    opacity: 0.6;
+  }
+  .am-button.am-button-disabled {
+    background-color: darkgray !important;
+  }
+
+  //nav
+  .am-navbar {
+    min-height: 90px;
+    flex-basis: 90px;
+    .am-navbar-left, .am-navbar-right {
+      max-width: 120px;
+    }
+    &.am-navbar-light {
+      color: #000;
+    }
+  }
+
+  //
+  #game{
+    width: 100%;
+    height: 100%;
+    .fontInit{
+      font-family: gameFont;
+    }
+  }
+}
+
+@keyframes imgFlip {
+  0% {
+    transform: rotateY(0deg);
+    transform-origin: left center;
+    z-index: 5;
+  }
+  25% {
+
+  }
+  100% {
+    transform: rotateY(-180deg);
+    transform-origin: left center;
+    z-index: 5;
+  }
+}
+
+.testCss3 {
+  height: 100%;
+  .am-navbar-light {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+  }
+  .content {
+    height: 100%;
+    background-color: #00a2ae;
+    perspective-origin: center center;
+    perspective: 2400;
+    position: relative;
+    img {
+      width: 80%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      &.doAnimated {
+        animation: imgFlip 4s linear forwards;
+      }
+      &.part1 {
+        z-index: 4;
+      }
+      &.part2 {
+        z-index: 3;
+      }
+      &.part3 {
+        z-index: 2;
+      }
+      &.part4 {
+        z-index: 1;
+      }
+    }
+  }
+}
+
+.testCss4 {
+  height: 100%;
+  .flipArea {
+    width: 80%;
+    height: 600px;
+    position: relative;
+    perspective-origin: center center;
+    .shadowDiv {
+      width: 1px;
+      height: 500px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      box-shadow: 6px 0 14px rgba(0, 0, 0, .5);
+    }
+    .imgContainer {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      transform: translate3d(-29px, 2px, 0px) rotateZ(19deg);
+      transition-duration: 2s;
+      overflow: hidden;
+      &.ani {
+        transform-origin: 100% 0;
+        transform: translate3d(-299px, 0px, 0px) rotateZ(0deg);
+        .part3 {
+          transform-origin: 100% 0%;
+          -webkit-transform: translate(300px, 0px) rotate(0deg);
+        }
+      }
+      .part3 {
+        transition-duration: 2s;
+        transform: translate3d(16px, -59px, 0px) rotateZ(-19deg);
+      }
+    }
+    img {
+      width: 50%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      box-shadow: -6px 0 14px rgba(0, 0, 0, .5);
+      &.part2 {
+        transform: translate3d(284px, -51px, 0px) rotateZ(24deg);;
+        transition-duration: 2s;
+        z-index: 2;
+        &.ani {
+          transform-origin: 100% 0;
+          transform: translate(0px, 0px) rotate(0deg);
+        }
+      }
+    }
+  }
+}
