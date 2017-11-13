@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-a phaser demo
+[a phaser demo ](https://rongmine.github.io/flappybird/)
 
 ## 运行步骤
    1.yarn install
