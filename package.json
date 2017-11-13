@@ -1,7 +1,7 @@
 {
-  "name": "phaser_flappy_bird",
+  "name": "paherFlapyBird",
   "version": "0.1.0",
-  "homepage": "https://rongmine.github.io/phaser_flappy_bird",
+  "homepage": "https://rongmine.github.io/paherFlapyBird",
   "private": true,
   "dependencies": {
     "@xkeshi/image-compressor": "^0.5.1",
