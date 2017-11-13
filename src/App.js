@@ -5,7 +5,7 @@ import {
     TestCss4,
     DefaultTemplate,
 } from './scripts/index';
-import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
+import {HashRouter as Router,Route,Switch} from 'react-router-dom';
 import 'animate.css';
 import './stylesheets/index.css';
 

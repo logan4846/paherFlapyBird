@@ -1,6 +1,7 @@
 {
   "name": "h5-library",
   "version": "0.1.0",
+  "homepage": "https://github.com/RongMine/paherFlapyBird",
   "private": true,
   "dependencies": {
     "@xkeshi/image-compressor": "^0.5.1",
@@ -32,6 +33,7 @@
     "extract-text-webpack-plugin": "2.1.2",
     "file-loader": "0.11.2",
     "fs-extra": "3.0.1",
+    "gh-pages": "^1.0.0",
     "hilo": "^0.1.0-pre-dev-beta-10",
     "html-webpack-plugin": "2.29.0",
     "html2canvas": "^0.5.0-beta4",
@@ -77,7 +79,9 @@
     "start": "npm-run-all -p watch-css start-js",
     "build": "yarn run build-css && node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
-    "node": "node nodeServer.js"
+    "node": "node nodeServer.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "jest": {
     "collectCoverageFrom": [

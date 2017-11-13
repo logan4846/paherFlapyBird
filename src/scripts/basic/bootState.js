@@ -6,7 +6,7 @@
 let bootState = function(game){
     this.preload = function(){
         console.log(process.env.PUBLIC_URL);
-        game.load.image('loading',process.env.PUBLIC_URL + 'loading.gif');
+        game.load.image('loading',process.env.PUBLIC_URL + '/loading.gif');
     }
     this.create = function(){
         game.state.start('loader');
