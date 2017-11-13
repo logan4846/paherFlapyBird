@@ -1,7 +1,7 @@
 {
   "name": "h5-library",
   "version": "0.1.0",
-  "homepage": "https://github.com/RongMine/paherFlapyBird",
+  "homepage": "https://rongmine.github.io/flappybird/",
   "private": true,
   "dependencies": {
     "@xkeshi/image-compressor": "^0.5.1",
