@@ -1,7 +1,7 @@
 {
-  "name": "h5-library",
+  "name": "phaser_flappy_bird",
   "version": "0.1.0",
-  "homepage": "https://rongmine.github.io/flappybird/",
+  "homepage": "https://rongmine.github.io/phaser_flappy_bird",
   "private": true,
   "dependencies": {
     "@xkeshi/image-compressor": "^0.5.1",
