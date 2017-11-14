@@ -47,6 +47,7 @@
     "nprogress": "^0.2.0",
     "object-assign": "4.1.1",
     "path": "^0.12.7",
+    "phaser": "^2.6.2",
     "postcss-flexbugs-fixes": "3.0.0",
     "postcss-loader": "2.0.6",
     "promise": "7.1.1",

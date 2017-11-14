@@ -5,10 +5,12 @@ import Test from './basic/Test';
 import TestCss3 from './basic/TestCss3';
 import TestCss4 from './basic/TestCss4';
 import DefaultTemplate from './basic/DefaultTemplate';
+import Running from './running/Running';
 
 export {
     Test,
     DefaultTemplate,
     TestCss3,
     TestCss4,
+    Running
 }

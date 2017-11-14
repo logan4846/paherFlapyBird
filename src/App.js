@@ -4,6 +4,7 @@ import {
     TestCss3,
     TestCss4,
     DefaultTemplate,
+    Running
 } from './scripts/index';
 import {HashRouter as Router,Route,Switch} from 'react-router-dom';
 import 'animate.css';
@@ -16,6 +17,7 @@ class App extends Component {
                 <div id="App">
                     <Switch>
                         <Route exact path="/" component={DefaultTemplate}/>
+                        <Route exact path="/running" component={Running}/>
                         <Route children={(props) => (
                         <Switch>
                              <Route exact path="/test" component={Test}/>
