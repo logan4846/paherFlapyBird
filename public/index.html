@@ -27,22 +27,9 @@
 </head>
 <body>
 <div id="root"></div>
-<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script src="%PUBLIC_URL%/phaser.min.js"></script>
 <script type="text/javascript">
     document.body.addEventListener('touchstart', function () { });
-    window.is_weixn = function () {
-        var ua = navigator.userAgent.toLowerCase();
-        if (ua.match(/MicroMessenger/i) == "micromessenger") {
-            return true;
-        } else {
-            return false;
-        }
-    };
-    if (window.is_weixn()) {
-        window.wx = wx;
-    }
-    window.Phaser = Phaser;
 </script>
 </body>
 </html>
