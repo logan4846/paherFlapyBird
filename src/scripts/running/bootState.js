@@ -5,7 +5,7 @@
     //加载最开始的资源
 let bootState = function(game){
     this.preload = function(){
-        game.load.image('loading',process.env.PUBLIC_URL + '/loading.gif');
+        game.load.spritesheet('loading', process.env.PUBLIC_URL + '/loading.png', 220, 19);
     }
     this.create = function(){
         game.state.start('loader');

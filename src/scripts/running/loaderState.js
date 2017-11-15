@@ -5,8 +5,11 @@
 let loaderState = function (game) {
     var progressText;//加载进度
     this.init = function () {
-        this.sprite = game.add.sprite(game.world.centerX, game.world.centerY, 'loading');
-        this.sprite.anchor = {x: 0.5, y: 0.5};
+        this.loading = game.add.sprite(game.world.centerX,game.world.centerY,'loading');
+        this.loading.anchor  = {x:0.5,y:0.5};
+        this.loading.animations.add('doLoad',[0,1,2,3,4,5,6,7,8,9]);
+        this.loading.animations.play('doLoad',10,true,true);
+
         progressText = game.add.text(game.world.centerX, game.world.centerY + 30, '0%', {
             fill: '#fff',
             fontSize: '24px'
@@ -14,15 +17,8 @@ let loaderState = function (game) {
         progressText.anchor = {x: 0.5, y: 0.5};
     };
     this.preload = function () {
-        game.load.spritesheet('pipe', process.env.PUBLIC_URL + '/holdback.png', 128, 802);
-        game.load.spritesheet('bird', process.env.PUBLIC_URL + '/bird_new.png', 497, 450);
-        game.load.image('start', process.env.PUBLIC_URL + '/start.png');
-        game.load.image('scoreBg', process.env.PUBLIC_URL + '/scoreTemplate.png');
-        game.load.image('restart', process.env.PUBLIC_URL + '/restart.png');
-        game.load.image('bg', process.env.PUBLIC_URL + '/bg.png');
-        game.load.image('over', process.env.PUBLIC_URL + '/over.png');
-        game.load.image('ground', process.env.PUBLIC_URL + '/ground.png');
-        game.load.image('holdback', process.env.PUBLIC_URL + '/holdback.png');
+        game.load.image('bg', process.env.PUBLIC_URL + '/running/bg.jpg');
+        game.load.spritesheet('bird',process.env.PUBLIC_URL + '/bird_new.png',497,450);
         game.load.onFileComplete.add(function (progress) {
             progressText.text = progress + '%';
         })
@@ -31,7 +27,7 @@ let loaderState = function (game) {
 
     }
     this.create = function () {
-        //game.state.start('start');
+        game.state.start('start');
     }
 };
 
