@@ -1,8 +1,7 @@
-var proxy = require('html2canvas-proxy');
+// var proxy = require('html2canvas-proxy');
 const express = require('express');
 const path = require('path');
 const app = express();
-app.use('/', proxy());
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('/*', function (req, res) {
