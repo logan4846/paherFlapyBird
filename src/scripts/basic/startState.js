@@ -7,7 +7,7 @@ let startState = function(game){
         game.add.tileSprite(0,0,game.width,game.height,'bg').autoScroll(-100,0);
 
         //
-        var title = game.add.text(game.world.centerX,200,'Phaser Demo',{
+        var title = game.add.text(game.world.centerX,200,'Phaser Demo logan',{
             fill:'#fff',
             fontSize:'48px'
         });
